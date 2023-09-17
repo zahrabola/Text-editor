@@ -15,10 +15,11 @@
   href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
   rel="stylesheet"
 />
+<link rel="stylesheet" href="src/style.css">
 <!---------https://codingartistweb.com/2022/04/rich-text-editor-with-javascript/
 https://www.youtube.com/watch?v=la-0HOaNL10&list=PLNCevxogE3fgy0pAzVccadWKaQp9iHspz&index=4&t=16s -->
 <body>
-    <div class="contaiiner border">
+    <div class="container border p-2">
         <div class="options">
             <!---format of text-->
             <button id="boldtext" class="opt-btn format">
@@ -31,7 +32,7 @@ https://www.youtube.com/watch?v=la-0HOaNL10&list=PLNCevxogE3fgy0pAzVccadWKaQp9iH
                <!---format of text-->
                <button id="underlinetext" class="opt-btn format">
                 <i class="fa-solid fa-underline"></i>
-            </button>s
+            </button>
                <!---format of text-->
                <button id="crossthroughtext" class="opt-btn format">
                 <i class="fa-solid fa-strikethrough"></i>
@@ -68,11 +69,52 @@ https://www.youtube.com/watch?v=la-0HOaNL10&list=PLNCevxogE3fgy0pAzVccadWKaQp9iH
              <button id="unlinktext" class="opt-btn format">
                 <i class="fa fa-unlink"></i>
             </button>
-            
               <!-- Alignment -->
+              <button id="jutifyleft"  class="opt-btn align">
+                <i class="fa-solid fa-align-left"></i>
+              </button>
+              <button id="jutifyCenter"  class="opt-btn align">
+                <i class="fa-solid fa-align-center"></i>
+              </button>
+              <button id="jutifyRight"  class="opt-btn align">
+                <i class="fa-solid fa-align-right"></i>
+              </button>
+              <button id="jutifyFull"  class="opt-btn align">
+                <i class="fa-solid fa-align-justify"></i>
+              </button>
+              <button id="indent"  class="opt-btn spacing">
+                <i class="fa-solid fa-indent"></i>
+              </button>
+              <button id="outdent"  class="opt-btn spacing">
+                <i class="fa-solid fa-outdent"></i>
+              </button>
+              <!---Heading for text--->
+              <select id="formatblock" class="adv-opt-btn">
+                <option value="H1">H1</option>
+                <option value="H2">H2</option>
+                <option value="H3">H3</option>
+                <option value="H4">H4</option>
+                <option value="H5">H5</option>
+                <option value="H6">H6</option>
+                 </select>
+           
+            <!---font styles-->
+        <select class="adv-opt-btn" id="FontName"></select>
+        <select class="adv-opt-btn" id="FontSize"></select>
+
+        <!----colours of text---->
+        <div class="inputwrap">
+            <input type="color" id="forecolourtext" class="adv-opt-btn">
+            <label for="forecolourtext">Font Colour</label>
+        </div>
+        <div class="inputwrap">
+            <input type="color" id="backcolourtext" class="adv-opt-btn">
+            <label for="backcolourtext">Highlight Colour</label>
+        </div> 
+        </div>
+        <!-----text box------>
+        <div id="textinput" contenteditable="true">
             
-          
-          
         </div>
     </div>
     <!--bootstrap-->
