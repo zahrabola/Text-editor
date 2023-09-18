@@ -21,7 +21,7 @@ let FontList = [
   "cursive",
 ];
 
-/// initial settings = 1
+/// initial settings - 1
 /// object initializer value of an object
 //function calls for highlighting buttons
 //No highlights for link, unlink,lists,
@@ -31,6 +31,16 @@ const initializer = () => {
   highlighter(spacingbtn, true);
   highlighter(formatbtn, false);
   highlighter(scriptbtn, true);
+
+
+
+  //adding options to dropdown font names - 3
+  FontList.map((value) => {
+    let option  = document. createElement("option");
+    option.value = value;
+    option.innerHTML = value;
+    fontname. appendChild(option)
+  })
 };
 
 // clicked buuton highlight = 2
