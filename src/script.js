@@ -61,3 +61,9 @@ const highlighter = (className, Removeneeds) => {
     });
   });
 };
+const removeHighlighter = (className) => {
+  className.forEach((button) => {
+    button.classList.remove("active");
+  });
+};
+window.onload = initializer();
