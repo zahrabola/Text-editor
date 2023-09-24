@@ -39,16 +39,17 @@ const initializer = () => {
     option.innerHTML = value;
     fontname. appendChild(option)
   })
-};
-// fontsize range til 10 -4
-for(let i = 1; i <= 10; i++){
-  let option = document.createElement("option")
+  // fontsize range til 10 -4
+for (let i = 1; i <= 10; i++) {
+  let option = document.createElement("option");
   option.value = i;
   option.innerHTML = i;
-  fontsizeref,appendChild(option)
+  fontsizeref.appendChild(option)
   //// default size
-  fontsizeref.value = 3 
+  fontsizeref.value = 5
 }
+
+};
 
 // clicked buuton highlight = 2
 //The code is used to highlight the clicked button.
