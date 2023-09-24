@@ -39,17 +39,49 @@ const initializer = () => {
     option.innerHTML = value;
     fontname. appendChild(option)
   })
-  // fontsize range til 10 -4
+  // fontsize range til 10 - 4
 for (let i = 1; i <= 10; i++) {
   let option = document.createElement("option");
   option.value = i;
   option.innerHTML = i;
   fontsizeref.appendChild(option)
+}
   //// default size
   fontsizeref.value = 5
-}
-
 };
+
+
+// main logic for text modification - 5
+const modifyText = (command, defaultUi, value) => {
+  ///execute commsnd on the selected text
+  document.execCommand(command, defaultUi, value);
+};
+
+///adding event listner to buttons - 6
+// operations that dont need value parameter like bold or italic 
+optbutton.forEach((button) => {
+  button.addEventListener("click", () => {
+    modifyText(button.id, false, null);
+  });
+});
+// options to require value parements like the colours and fonts 
+advoptbutton.forEach((button) => {
+  button.addEventListener("change", () => {
+    modifyText(button.id, false, button.value);
+  });
+});
+
+//link
+linkbtn.addEventListener("click", () => {
+  let userLink = prompt("Enter a URL");
+  //if link has http then pass directly else add https
+  if (/http/i.test(userLink)) {
+    modifyText(linkbtn.id, false, userLink);
+  } else {
+    userLink = "http://" + userLink;
+    modifyText(linkbtn.id, false, userLink);
+  }
+});
 
 // clicked buuton highlight = 2
 //The code is used to highlight the clicked button.
